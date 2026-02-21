@@ -1,0 +1,249 @@
+head {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #fffaf0;
+}
+
+/* Navigation */
+nav {
+    background-color: #a0522d; /* couleur henné */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* HERO (bannière du haut) */
+    .hero {
+        height: 50vh;
+        background: url("https://orientalart.fr/cdn/shop/files/Henne_Fessi-Amazigh-berbere-Chleuh-Tarz-henne_modele_fessi-henne_modele_main16.webp?v=1721044956&width=1946")
+            center/cover no-repeat;
+        position: relative;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.55); /* voile noir */
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+        margin: 0;
+    }
+
+    .hero-content p {
+        font-size: 1.4em;
+        margin-top: 10px;
+        color: #f4e4c1;
+    }
+
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* doré pour survol */
+}
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+section h2, section h3 {
+    font-size: 3em;
+    color: #a0522d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#apropos p {
+    font-size: 1.4rem;
+}
+
+#apropos {
+    background-color: #fff0e5;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement si nécessaire */
+    padding: 80px 20px;      /* plus d'espace en haut et bas */
+}
+
+#apropos .apropos-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+
+/* Formulaire */
+form {
+    background-color: #fff0e5;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #a0522d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #8b3e2f;
+}
+
+/* Footer / contact */
+#contact {
+    background-color: #a0522d;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+/* =============================== */
+/* GALERIE LUXE ORIENTALE NOIR & OR */
+/* =============================== */
+
+#galerie {
+    background-color: #a0522d;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Motif subtil en fond */
+#galerie::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(212,175,55,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.4;
+}
+
+#galerie h2 {
+    color: #d4af37;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Ligne décorative orientale */
+#galerie h2::after {
+    content: "✦ ✧ ✦";
+    display: block;
+    font-size: 0.8em;
+    margin-top: 15px;
+    color: #d4af37;
+}
+
+/* Grille */
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Cadre doré + style commun */
+.galerie-item {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay sombre chic */
+.galerie-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: rgba(86, 8, 8, 0.55);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Hover effect */
+.galerie-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212,175,55,0.3);
+}
+
+.galerie-item:hover::after {
+    opacity: 1;
+}
+
