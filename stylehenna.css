@@ -1,0 +1,224 @@
+head {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #fffaf0;
+}
+
+/* Navigation */
+nav {
+    background-color: #a0522d; /* couleur henné */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* doré pour survol */
+}
+
+/* Hero section */
+.hero {
+    background: url('henna5.jpg') center/cover no-repeat;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+section h2, section h3 {
+    color: #a0522d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#apropos {
+    background-color: #fff0e5;
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;     /* centre verticalement si nécessaire */
+    padding: 80px 20px;      /* plus d'espace en haut et bas */
+}
+
+#apropos .apropos-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+
+/* Formulaire */
+form {
+    background-color: #fff0e5;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #a0522d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #8b3e2f;
+}
+
+/* Footer / contact */
+#contact {
+    background-color: #a0522d;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+
+/* =============================== */
+/* GALERIE */
+/* =============================== */
+
+#galerie {
+    background-color: #a0522d;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#galerie h2 {
+    color: #d4af37;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+}
+
+#galerie h2::after {
+    content: "✦ ✧ ✦";
+    display: block;
+    font-size: 0.8em;
+    margin-top: 15px;
+    color: #d4af37;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galerie-item {
+    position: relative; /* IMPORTANT pour overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffaf0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.galerie-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* voit toute l’image */
+    border-radius: 20px;
+}
+
+/* Overlay */
+.galerie-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(86, 8, 8, 0.55);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.galerie-item:hover {
+    transform: translateY(-10px);
+}
+
+.galerie-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .galerie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
