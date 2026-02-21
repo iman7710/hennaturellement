@@ -64,25 +64,17 @@
 
     <section id="rdv">
         <h2>Prise de rendez-vous</h2>
-        <form method="post" action="cgi-bin/script.php">
+        <form action="https://formspree.io/f/xaqdpbvp" method="POST">
             <label for="nom">Votre nom :</label>
             <input type="text" id="nom" name="nom" required>
 
-            <label for="email">Votre adresse email :</label>
+            <label for="email">Votre email :</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="objet">Objet de l'email :</label>
-            <input type="text" id="objet" name="objet" required>
+            <label for="objet">Objet :</label>
+            <input type="text" id="objet" name="objet">
 
-            <label>Choisissez votre préférence :</label>
-            <input type="checkbox" id="main1" name="pfm" value="1 main">
-            <label for="main1">1 main</label>
-            <input type="checkbox" id="main2" name="pfm" value="2 mains">
-            <label for="main2">2 mains</label>
-            <input type="checkbox" id="main3" name="pfm" value="Plusieurs mains">
-            <label for="main3">Plusieurs mains</label>
-
-            <label for="message">Votre inspiration :</label>
+            <label for="message">Votre message :</label>
             <textarea id="message" name="message" rows="6" required></textarea>
 
             <input type="submit" value="Envoyer">
