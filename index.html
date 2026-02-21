@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna'turellement</title>
+    <link rel="stylesheet" href="stylehenna.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Mrs Hennaya</div>
+        <a href="#acceuil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#rdv">Rendez-vous</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="acceuil" class="hero" style="background: url('henna5.jpg') center/cover no-repeat; height: 80vh;">
+        <div class="hero-content">
+            <h1>Bienvenue dans Henna'turellement</h1>
+            <p class="slogan">Le henné qui te ressemble, sans prise de tête !</p>
+        </div>
+    </section>
+</p>
+
+</div>
+
+    </section>
+
+    <section id="apropos" align="center">
+        <div class="apropos-content">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Deux jeunes sœurs passionnées par l'art du henné, <BR>
+                offrant des créations uniques et personnalisées pour sublimer vos mains <BR>
+                et vos moments spéciaux.</p>
+        </div>
+    </section>
+
+<section id="galerie">
+    <h2>Nos créations</h2>
+
+    <div class="galerie-grid">  <!-- IMPORTANT -->
+
+        <div class="galerie-item">
+            <img src="henna1.jpg" alt="Henna 1">
+        </div>
+
+        <div class="galerie-item">
+            <img src="henna2.jpg" alt="Henna 2">
+        </div>
+
+        <div class="galerie-item">
+            <img src="henna3.jpg" alt="Henna 3">
+        </div>
+
+        <div class="galerie-item">
+            <img src="henna4.jpg" alt="Henna 4">
+        </div>
+
+    </div> <!-- FIN galerie-grid -->
+
+</section>
+
+
+    <section id="rdv">
+        <h2>Prise de rendez-vous</h2>
+        <form method="post" action="cgi-bin/script.php">
+            <label for="nom">Votre nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Votre adresse email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="objet">Objet de l'email :</label>
+            <input type="text" id="objet" name="objet" required>
+
+            <label>Choisissez votre préférence :</label>
+            <input type="checkbox" id="main1" name="pfm" value="1 main">
+            <label for="main1">1 main</label>
+            <input type="checkbox" id="main2" name="pfm" value="2 mains">
+            <label for="main2">2 mains</label>
+            <input type="checkbox" id="main3" name="pfm" value="Plusieurs mains">
+            <label for="main3">Plusieurs mains</label>
+
+            <label for="message">Votre inspiration :</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Pour toute question ou information, contactez-nous via email ou nos réseaux sociaux. <BR> Mail: mrs_hennaya@gmail.com Instagram: mrs_hennaya</p>
+    </section>
+</body>
+</html>
